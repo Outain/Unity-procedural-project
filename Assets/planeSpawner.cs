@@ -13,8 +13,9 @@ public class planeSpawner : MonoBehaviour {
 
     private void Awake()
     {
-        
+
         planeCountX = Mathf.Sqrt(planeCount);
+        hangar = new GameObject[planeCount];
         
     }
 
@@ -26,7 +27,7 @@ public class planeSpawner : MonoBehaviour {
             for (int j = 0; j < planeCountX; j++)
             {
                 hangarNumber++;
-                Vector3 planePos = new Vector3(i * planeWidth, j*planeWidth, 0);
+                Vector3 planePos = new Vector3(i * planeWidth, 0, j * planeWidth);
                 hangar[hangarNumber]= Instantiate(planeBoy, (Vector3.zero + planePos), transform.rotation);
                 planeRend = hangar[hangarNumber].GetComponent<Renderer>();
                 planeRend.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
