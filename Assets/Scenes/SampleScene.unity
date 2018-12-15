@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 5
   waveLength: 0.5
-  velocity: 1
+  velocity: 0.4
 --- !u!65 &307102634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -317,13 +317,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 307102632}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.4802787, y: -0, z: -0, w: 0.87711596}
   m_LocalPosition: {x: 0, y: 1.46, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 57.407, y: 0, z: 0}
 --- !u!1 &359232641
 GameObject:
   m_ObjectHideFlags: 0

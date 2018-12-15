@@ -19,7 +19,8 @@ public class waveCubeFirst : MonoBehaviour {
         theta += Time.deltaTime*frequency;
         float yOffset = Mathf.Cos(theta)*waveLength;
         float distance = velocity * Time.deltaTime; // Distance = velocity * Time
-        transform.position = new Vector3(transform.position.x, yOffset, transform.position.z+distance);
+        
+        transform.Translate(0,yOffset*Time.deltaTime,velocity*Time.deltaTime);
 		
 	}
 }
