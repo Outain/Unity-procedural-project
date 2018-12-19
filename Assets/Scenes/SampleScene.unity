@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
+  rend: {fileID: 0}
 --- !u!65 &80638054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -529,8 +530,8 @@ MonoBehaviour:
   headPrefab: {fileID: 1802275224146638, guid: fd4aa77aa2602994dbfa42f994e89d6d, type: 2}
   bodyPrefab: {fileID: 1049295452103176, guid: 2d72626d0264da844897a015a33ae185, type: 2}
   segments: []
-  segmentNumber: 4
-  colourChangeSpeed: 0
+  segmentNumber: 8
+  colourChangeSpeed: 0.1
 --- !u!1 &2008261178
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +544,7 @@ GameObject:
   - component: {fileID: 2008261181}
   - component: {fileID: 2008261180}
   - component: {fileID: 2008261179}
+  - component: {fileID: 2008261184}
   m_Layer: 0
   m_Name: seed
   m_TagString: seed
@@ -632,3 +634,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008261184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008261178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9185a6c4e0b00204687dae2d40ae5786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hue: 0
