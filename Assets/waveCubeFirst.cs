@@ -8,24 +8,27 @@ public class waveCubeFirst : MonoBehaviour {
     public float frequency;
     public float waveLength;
     public float velocity;
-    public Transform[] wayPoints;
+    public GameObject[] wayPoints;
+    public GameObject blankTransform;
     public int numberOfWaypoints;
     public int wayPointNumber;
     public float xLowerBound, xUpperBound, yLowerBound, yUpperBound, zLowerBound, zUpperBound;
     Vector3 targetDirection;
-    float turningSpeed;
+    public float turningSpeed;
 
 	// Use this for initialization
 	void Start () {
         wayPointNumber = 0;
         theta = 0;
-        wayPoints = new Transform[numberOfWaypoints];
+        wayPoints = new GameObject[numberOfWaypoints];
         for(int i=0; i<numberOfWaypoints; i++)
         {
+            wayPoints[i] = Instantiate(blankTransform);
             wayPoints[i].transform.position = new Vector3(Random.Range(xLowerBound, xUpperBound)
                 , Random.Range(yLowerBound, yUpperBound)
                 , Random.Range(zLowerBound, zUpperBound)
                 );
+            Debug.Log(wayPoints[i].transform.position);
         }
      
 	}
@@ -38,7 +41,7 @@ public class waveCubeFirst : MonoBehaviour {
         
         transform.Translate(0,yOffset,distance);
 
-        targetDirection = (transform.position - wayPoints[wayPointNumber].transform.position);
+        targetDirection = (wayPoints[wayPointNumber].transform.position-transform.position);
         float step = turningSpeed * Time.deltaTime;
         Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDirection, step, 0.0f);
         Debug.DrawRay(transform.position, newDir, Color.red);

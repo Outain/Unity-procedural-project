@@ -26,7 +26,7 @@ public class floorGrower : MonoBehaviour {
             else
             {
                 Vector3 ls = transform.localScale;
-                ls.y = Mathf.Lerp(ls.y, growNumber*5 + (audioManager.bands[bandNumber] * scale), Time.deltaTime * 3.0f);
+                ls.y = Mathf.Lerp(ls.y, growNumber*5 + (audioManager.bands[bandNumber-1] * scale), Time.deltaTime * 3.0f);
                 transform.localScale = ls;
             }
         }
