@@ -7,8 +7,8 @@ public class floorGrower : MonoBehaviour {
     float growNumber = 0;
     float finalHue;
     public Renderer rend;
-    
-
+    public int bandNumber;
+    public float scale = 10f;
     // Use this for initialization
     void Start () {
         rend = GetComponent<Renderer>();
@@ -22,6 +22,12 @@ public class floorGrower : MonoBehaviour {
             {
                 transform.localScale += new Vector3(0, Time.deltaTime, 0);
                 growNumber += Time.deltaTime / 5;
+            }
+            else
+            {
+                Vector3 ls = transform.localScale;
+                ls.y = Mathf.Lerp(ls.y, growNumber*5 + (audioManager.bands[bandNumber] * scale), Time.deltaTime * 3.0f);
+                transform.localScale = ls;
             }
         }
     }
@@ -40,6 +46,7 @@ public class floorGrower : MonoBehaviour {
                 rend.material.color = Color.HSVToRGB(finalHue, 1, 1);
                 activated = true;
             }
+            bandNumber = (int)(finalHue * 10); //the audio analyser had 9 bands in testing, this seemed like a simple way to divide the spread of different blocks into 9 different bands.
         }
     }
 
