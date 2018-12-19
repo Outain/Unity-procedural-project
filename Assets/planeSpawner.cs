@@ -10,6 +10,7 @@ public class planeSpawner : MonoBehaviour {
     float planeCountX;
     public float planeWidth;
     int hangarNumber = 0;
+    bool checkerBoard;
 
     private void Awake()
     {
@@ -24,13 +25,25 @@ public class planeSpawner : MonoBehaviour {
 
         for (int i = 0; i < planeCountX; i++)
         {
+            checkerBoard = !checkerBoard; //this enables the checkerBoard pattern, as each new line
             for (int j = 0; j < planeCountX; j++)
             {
-                hangarNumber++;
+                
                 Vector3 planePos = new Vector3(i * planeWidth, 0, j * planeWidth);
                 hangar[hangarNumber]= Instantiate(planeBoy, (Vector3.zero + planePos), transform.rotation);
                 planeRend = hangar[hangarNumber].GetComponent<Renderer>();
-                planeRend.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+                hangar[hangarNumber].transform.localScale = new Vector3(1, 0.3f, 1);
+                //planeRend.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+                if (checkerBoard)
+                {
+                    planeRend.material.color = Color.white;
+                }
+                else
+                {
+                    planeRend.material.color = Color.black;
+                }
+                checkerBoard = !checkerBoard;
+                hangarNumber++;
             }
         }
 		
