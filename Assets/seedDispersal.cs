@@ -6,6 +6,7 @@ public class seedDispersal : MonoBehaviour {
     public int numberOfSeeds;
     public GameObject seed;
     GameObject[] seeds;
+    public float separationDistance;
    
     public float power = 10f;
 
@@ -19,8 +20,8 @@ public class seedDispersal : MonoBehaviour {
         
         for(int i =0; i< numberOfSeeds; i++)
         {
-            Vector3 pos = new Vector3(transform.position.x + i, transform.position.y, transform.position.z);
-            seeds[i+1]= Instantiate(seed, pos, Random.rotation);
+            Vector3 pos = new Vector3(transform.position.x + i*separationDistance, transform.position.y, transform.position.z);
+            seeds[i]= Instantiate(seed, pos, Random.rotation);
             Rigidbody rb = seeds[i].GetComponent<Rigidbody>();
             rb.AddForce(seeds[i].transform.forward* power);
 
