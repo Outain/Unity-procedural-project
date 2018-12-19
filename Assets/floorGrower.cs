@@ -32,6 +32,7 @@ public class floorGrower : MonoBehaviour {
         {
             seedValues seedScript = collision.gameObject.GetComponent<seedValues>();
             finalHue = seedScript.hue;
+            Destroy(collision.gameObject);
             if (!activated)
             {
                 // growTime();
