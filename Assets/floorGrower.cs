@@ -26,7 +26,7 @@ public class floorGrower : MonoBehaviour {
             else
             {
                 Vector3 ls = transform.localScale;
-                ls.y = Mathf.Lerp(ls.y, growNumber*5 + (audioManager.bands[bandNumber-1] * scale), Time.deltaTime * 3.0f);
+                ls.y = Mathf.Lerp(ls.y, growNumber*5 + (audioManager.bands[bandNumber] * scale), Time.deltaTime * 3.0f);
                 transform.localScale = ls;
             }
         }
@@ -46,7 +46,13 @@ public class floorGrower : MonoBehaviour {
                 rend.material.color = Color.HSVToRGB(finalHue, 1, 1);
                 activated = true;
             }
+
             bandNumber = (int)(finalHue * 10); //the audio analyser had 9 bands in testing, this seemed like a simple way to divide the spread of different blocks into 9 different bands.
+            if(bandNumber == 9)
+            {
+                bandNumber = 8; //this means there will be only 9 possible values, to align with the 9 bands.
+            }
+            Debug.Log(bandNumber);
         }
     }
 
