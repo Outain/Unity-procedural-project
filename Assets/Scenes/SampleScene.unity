@@ -823,12 +823,12 @@ MonoBehaviour:
   colourChangeSpeed: 0.3
   theta: 0
   power: 500
-  xLowerBound: 5
-  xUpperBound: 25
+  xLowerBound: 0
+  xUpperBound: 29
   yLowerBound: 4
   yUpperBound: 7
-  zLowerBound: 5
-  zUpperBound: 25
+  zLowerBound: 0
+  zUpperBound: 29
 --- !u!65 &1111949496
 BoxCollider:
   m_ObjectHideFlags: 0

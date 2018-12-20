@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65724722455797712}
   - component: {fileID: 54706096807310788}
   - component: {fileID: 114295875095197608}
+  - component: {fileID: 114943232052480980}
   m_Layer: 0
   m_Name: seed
   m_TagString: seed
@@ -124,4 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72ea3f9810beb24aaf36276266c19da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeUntilDestroyed: 0
+  timeUntilDestroyed: 5
+--- !u!114 &114943232052480980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1624870370025692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9185a6c4e0b00204687dae2d40ae5786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hue: 0
