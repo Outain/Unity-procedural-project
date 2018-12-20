@@ -36,22 +36,24 @@ public class floorGrower : MonoBehaviour {
     {
         if(collision.gameObject.tag == "seed")
         {
+            
+            if (!activated) { 
+
             seedValues seedScript = collision.gameObject.GetComponent<seedValues>();
             finalHue = seedScript.hue;
             Destroy(collision.gameObject);
-            if (!activated)
-            {
-                // growTime();
-                //Debug.Log("growTime");
-                rend.material.color = Color.HSVToRGB(finalHue, 1, 1);
-                activated = true;
-            }
+            // growTime();
+            //Debug.Log("growTime");
+            rend.material.color = Color.HSVToRGB(finalHue, 1, 1);
+            activated = true;
+            bandNumber = (int)(finalHue * 9);
+        }
 
-            bandNumber = (int)(finalHue * 10); //the audio analyser had 9 bands in testing, this seemed like a simple way to divide the spread of different blocks into 9 different bands.
-            if(bandNumber == 9)
-            {
-                bandNumber = 8; //this means there will be only 9 possible values, to align with the 9 bands.
-            }
+             //the audio analyser had 9 bands in testing, this seemed like a simple way to divide the spread of different blocks into 9 different bands.
+            //if(bandNumber == 9)
+            //{
+            //    bandNumber = 8; //this means there will be only 9 possible values, to align with the 9 bands.
+            //}
             Debug.Log(bandNumber);
         }
     }

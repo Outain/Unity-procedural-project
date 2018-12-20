@@ -671,9 +671,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useMic: 0
-  clip: {fileID: 0}
-  amgMic: {fileID: 0}
-  amgMaster: {fileID: 0}
+  clip: {fileID: 8300000, guid: 9667043775058094ba0459966cc48814, type: 3}
+  amgMic: {fileID: 24300002, guid: c77f337de226d3041bedecf289218b95, type: 2}
+  amgMaster: {fileID: 24300002, guid: c77f337de226d3041bedecf289218b95, type: 2}
   selectedDevice: 
   binWidth: 0
   sampleRate: 0
@@ -685,8 +685,9 @@ AudioSource:
   m_GameObject: {fileID: 1065166166}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93d8b7bcc1d1e8a4c86a73b3949564f4, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c77f337de226d3041bedecf289218b95,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9667043775058094ba0459966cc48814, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -815,7 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e188c98ff882e84d9ff5fb92cf04a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSeeds: 5
+  numberOfSeeds: 10
   seed: {fileID: 1624870370025692, guid: beeae432053d4bd48a59265615e45d86, type: 2}
   separationDistance: 0.5
   rend: {fileID: 0}
@@ -824,8 +825,8 @@ MonoBehaviour:
   power: 500
   xLowerBound: 5
   xUpperBound: 25
-  yLowerBound: 3
-  yUpperBound: 5
+  yLowerBound: 4
+  yUpperBound: 7
   zLowerBound: 5
   zUpperBound: 25
 --- !u!65 &1111949496
