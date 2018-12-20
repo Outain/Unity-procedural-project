@@ -24,17 +24,12 @@ public class objectInteraction : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 1000))
                 if (hit.transform.tag == "interactable")
-                {
-
-                    print("I'm looking at " + hit.transform.name);
+                { 
                     hit.transform.gameObject.SendMessage("clicked");
                    
                     //Destroy(hit.transform.gameObject);
                 }
-                else
-                {
-                    print("I'm looking at nothing!");
-                }
+                
         }
     }
 

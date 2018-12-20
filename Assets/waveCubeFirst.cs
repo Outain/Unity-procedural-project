@@ -53,7 +53,7 @@ public class waveCubeFirst : MonoBehaviour {
         {
             wayPointNumber++;
         }
-        if (wayPointNumber > numberOfWaypoints) {
+        if (wayPointNumber >= numberOfWaypoints) {
             wayPointNumber = 0;
         }
     }
