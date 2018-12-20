@@ -7,3 +7,5 @@ When the player begins, a giant checkerboard canvas is generated. The player mus
 The AudioAnalyser, tailAnimator and FPScontroller scripts are taken directly from GE1 examples. Every other script is original work or takes code from examples and heavily modifies it, inlcuding the scripts that generates the floor, all behaviour with seed spawners and seeds, and their interactions with floor tiles, the script for the head movement of the flying creature and its pathfinding throughout the level, as well as changing its colour. I also had to heavily modify the original audio visualiser example code from class so it would pass in the right values to each new block created.
 
 I am most proud of how the overall effect looks after enough seeds have fallen, since cubes pulsating at the same frequencies have both the same size and colour, its easy to see them together in the scene so the it feels very cohesive.
+
+[![YouTube](http://img.youtube.com/vi/ALuans6N6X0/0.jpg)](https://www.youtube.com/watch?v=ALuans6N6X0)
