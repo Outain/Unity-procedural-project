@@ -120,7 +120,7 @@ MonoBehaviour:
   xLowerBound: 0
   xUpperBound: 30
   yLowerBound: 3
-  yUpperBound: 10
+  yUpperBound: 7
   zLowerBound: 0
   zUpperBound: 30
   turningSpeed: 1

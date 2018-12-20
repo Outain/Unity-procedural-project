@@ -50,6 +50,13 @@ public class segSpawner : MonoBehaviour
             }
             segments[i].GetComponent<Renderer>().material.color = Color.HSVToRGB(hueValue, 1, 1);
         }
+
 		
 	}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(transform.position, new Vector3(1, 1, 1));
+    }
 }

@@ -53,4 +53,13 @@ public class planeSpawner : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnDrawGizmosSelected()
+    {
+        Vector3 rightSide = new Vector3(Mathf.Sqrt(planeCount) * planeWidth, 0, 0);
+        Vector3 upSide = new Vector3(0, 0, Mathf.Sqrt(planeCount) * planeWidth);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, rightSide);
+        Gizmos.DrawLine(transform.position, upSide);
+    }
 }

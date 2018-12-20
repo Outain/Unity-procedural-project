@@ -6,6 +6,7 @@ TagManager:
   tags:
   - seed
   - waypoint
+  - interactable
   layers:
   - Default
   - TransparentFX
