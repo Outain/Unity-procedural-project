@@ -112,6 +112,18 @@ MonoBehaviour:
   frequency: 10
   waveLength: 0.5
   velocity: 0.4
+  wayPoints: []
+  blankTransform: {fileID: 1473807652685936, guid: ffec752f7eedaa5418643cb8cc9dd6be,
+    type: 2}
+  numberOfWaypoints: 6
+  wayPointNumber: 0
+  xLowerBound: 0
+  xUpperBound: 30
+  yLowerBound: 3
+  yUpperBound: 10
+  zLowerBound: 0
+  zUpperBound: 30
+  turningSpeed: 1
 --- !u!114 &114390126111325306
 MonoBehaviour:
   m_ObjectHideFlags: 1
